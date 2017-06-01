@@ -14,5 +14,5 @@ public class MainActivity extends AppCompatActivity {
     //jayton
     //Charlie
     //another test
-    //James - says it's late, let's finish this up.
+    //James Michael Olson
 }
