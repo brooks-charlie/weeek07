@@ -15,5 +15,4 @@ public class MainActivity extends AppCompatActivity {
     //Charlie
     //another test
     //James
-    //jim:rock
 }
