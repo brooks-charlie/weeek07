@@ -6,10 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.weeek07.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="James says halleluia! Amen!!"
+        android:text="Create and Log Deck"
+        android:onClick="testDrive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
