@@ -16,6 +16,14 @@ public class Deck implements Serializable{
 
     private String deckName;
 
+    public String getDeckName() {
+        return deckName;
+    }
+
+    public void setDeckName(String deckName) {
+        this.deckName = deckName;
+    }
+
     Deck(String name) {
         this.deckName = name;
     }
@@ -28,7 +36,7 @@ public class Deck implements Serializable{
 
     public void logDeck() {
         for(int i = 0; i < cards.size(); i++) {
-            Log.d("Deck Log", cards.get(i).getPrompt() + cards.get(i).getAnswer());
+            Log.d("Deck Log", "Prompt:" + cards.get(i).getPrompt() + " Answer:" + cards.get(i).getAnswer());
         }
     }
 
