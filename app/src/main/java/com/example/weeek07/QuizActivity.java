@@ -1,6 +1,7 @@
 package com.example.weeek07;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,10 +10,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
+
+    public static final String PREFS_NAME = "MyPrefsFile";
+
+    // Are we loading from shared prefs?
+    boolean firstLoad;
 
     //Widgets
     TextView cardText;
@@ -38,7 +46,8 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
+        firstLoad = true;
+        cardToQuiz = null;
         //hook up them widgets
         cardText = (TextView)findViewById(R.id.textView);
         flipButton = (Button)findViewById(R.id.flipButton);
@@ -61,6 +70,15 @@ public class QuizActivity extends AppCompatActivity {
         wrongCount = 0;
         rightCount = 0;
         masteredCount = 0;
+
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, 0);
+        if (prefs.contains("lastCard")){
+            Gson gson = new Gson();
+            String json = prefs.getString("lastCard", null);
+            cardToQuiz = gson.fromJson(json, Card.class);
+            Log.d("Last Card loaded", "LOADED!");
+            firstLoad = false;
+        }
         makePrompt();
 
     }
@@ -71,8 +89,10 @@ public class QuizActivity extends AppCompatActivity {
             return;
         }
         //Get the card
-        cardToQuiz = quizCards.get(new Random().nextInt(quizCards.size()));
-
+        if (firstLoad) {
+            cardToQuiz = quizCards.get(new Random().nextInt(quizCards.size()));
+        }
+        firstLoad = true;
         //Set text to prompt and counters.
         cardText.setText(cardToQuiz.getPrompt());
         numberRightTextView.setText("Right: " + rightCount);
@@ -135,6 +155,22 @@ public class QuizActivity extends AppCompatActivity {
             Log.d("Quiz card Log", "Prompt:" + quizCards.get(i).getPrompt() + " Answer:" + quizCards.get(i).getAnswer() +
             " score:" + quizCards.get(i).getScore());
         }
+
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(cardToQuiz);
+        editor.putString("lastCard", json);
+        editor.commit();
+
+        Log.d("onStop occured", json);
+
+
 
     }
 }
