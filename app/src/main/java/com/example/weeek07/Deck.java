@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class Deck implements Serializable{
 
+    private static String TAG_NAME = "Deck Log";
+
     private String deckName;
 
     public String getDeckName() {
@@ -36,7 +38,7 @@ public class Deck implements Serializable{
 
     public void logDeck() {
         for(int i = 0; i < cards.size(); i++) {
-            Log.d("Deck Log", "Prompt:" + cards.get(i).getPrompt() + " Answer:" + cards.get(i).getAnswer());
+            Log.d(TAG_NAME, "Prompt:" + cards.get(i).getPrompt() + " Answer:" + cards.get(i).getAnswer());
         }
     }
 

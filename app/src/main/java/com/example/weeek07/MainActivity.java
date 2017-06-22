@@ -8,6 +8,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG_NAME = "DECK LOAD";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         testDeck.addCard("2+2", "4");
         testDeck.addCard("3+3", "6");
         testDeck.addCard("3+1", "4");
+        if (testDeck == null) {
+            Log.wtf( TAG_NAME, "Deck Load Failed");
+        } else {
+            Log.d(TAG_NAME, "Deck loaded");
+        }
         testDeck.logDeck();
         Intent i = new Intent(getApplicationContext(), QuizActivity.class);
         i.putExtra("deckToQuiz", testDeck);

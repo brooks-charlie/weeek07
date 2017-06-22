@@ -18,6 +18,7 @@ import java.util.Random;
 public class QuizActivity extends AppCompatActivity {
 
     public static final String PREFS_NAME = "MyPrefsFile";
+    private static final String TAG_NAME = "Quiz Deck Log";
 
     // Are we loading from shared prefs?
     boolean firstLoad;
@@ -152,7 +153,7 @@ public class QuizActivity extends AppCompatActivity {
     //This function logs each card in quizCards. Debugging purposes only. May be removed later.
     public void logQuizCards(){
         for (int i = 0; i < quizCards.size(); i++) {
-            Log.d("Quiz card Log", "Prompt:" + quizCards.get(i).getPrompt() + " Answer:" + quizCards.get(i).getAnswer() +
+            Log.d(TAG_NAME, "Prompt:" + quizCards.get(i).getPrompt() + " Answer:" + quizCards.get(i).getAnswer() +
             " score:" + quizCards.get(i).getScore());
         }
 
