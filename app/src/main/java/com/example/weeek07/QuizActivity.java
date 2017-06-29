@@ -15,6 +15,10 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**QuizActivity.java - Activity that runs through the quiz
+*@author Jayton
+*@version [1.0]
+*/
 public class QuizActivity extends AppCompatActivity {
 
     public static final String PREFS_NAME = "MyPrefsFile";
@@ -43,6 +47,11 @@ public class QuizActivity extends AppCompatActivity {
     Toast rightToast;
     Toast wrongToast;
 
+    /**
+    *Initaizle the quiz
+    *Creates a quiz and initalizes user interface and binds our widgets to the inouts
+    *@param savedInstanceState A variable of type Bundle
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +120,11 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
+    /**
+    *shows answer
+    *Reveals answer side of card
+    *@param v A variable of type View
+    */
     public void showAnswer(View v) {
         //Set text to the answer
         cardText.setText(cardToQuiz.getAnswer());
@@ -120,14 +134,22 @@ public class QuizActivity extends AppCompatActivity {
         wrongButton.setVisibility(View.VISIBLE);
         rightButton.setVisibility(View.VISIBLE);
     }
-
+    /**
+    *WrongClicked
+    *Allows use to record if then gave the wrong answer.
+    **@param v A variable of type View
+    */
     public void wrongClicked(View v) {
         wrongToast.show();
         cardToQuiz.gotWrong();
         wrongCount++;
         makePrompt();
     }
-
+    /**
+    *RightClicked
+    *Allows use to record if then gave the right answer.
+    *@param v A variable of type View
+    */
     public void rightClicked(View v) {
 
         cardToQuiz.gotRight();

@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+/** MainActivity.java - Main activity where are other activities begin.
+ *@author Jayton
+ *@version 7.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG_NAME = "DECK LOAD";
@@ -16,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
+    /**
+     *Driver
+     *Driver Program to get things started.
+     *@param view A variable of type View
+     */
     public void testDrive(View view) {
         Deck testDeck = new Deck("Basic math");
         testDeck.addCard("2+2", "4");
