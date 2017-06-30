@@ -29,6 +29,9 @@ public class Deck implements Serializable{
     Deck(String name) {
         this.deckName = name;
     }
+    Deck(){
+        deckName = null;
+    }
     ArrayList<Card> cards = new ArrayList<>();
 
     public void addCard(String prompt, String answer){

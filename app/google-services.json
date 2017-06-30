@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "853036408975",
+    "firebase_url": "https://brain-deck.firebaseio.com",
+    "project_id": "brain-deck",
+    "storage_bucket": "brain-deck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853036408975:android:da18f21cdbf3fb44",
+        "android_client_info": {
+          "package_name": "com.example.weeek07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853036408975-h0rgbc55p7kdvc2p4iv8vl3r0poncbck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.weeek07",
+            "certificate_hash": "4a3f74ce26d435a31a3402f9fe1a7457a9f56c8d"
+          }
+        },
+        {
+          "client_id": "853036408975-jub406mqbiitv6po8k6r4bpb1r2tsp1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6zhv-ht7neWPICrCCWMA-SKNaVIRpByc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853036408975-jub406mqbiitv6po8k6r4bpb1r2tsp1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
