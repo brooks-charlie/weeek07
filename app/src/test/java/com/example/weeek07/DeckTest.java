@@ -9,11 +9,16 @@ import static org.junit.Assert.assertEquals;
  */
 
 public class DeckTest {
-
+    Deck testDeck = new Deck("Basic math");
     @Test
-    public void deckCreates() throws Exception {
-        Deck testDeck = new Deck("Basic math");
+    public void deck_addCard() throws Exception {
         testDeck.addCard("2+2", "4");
         assertEquals(testDeck.cards.get(0).getPrompt(), "2+2");
+        assertEquals(testDeck.cards.get(0).getAnswer(), "4");
     }
+    public void deck_getDeckName() throws Exception {
+        assertEquals(testDeck.getDeckName(), "Basic math");
+
+    }
+
 }
