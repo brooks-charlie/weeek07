@@ -45,7 +45,7 @@ public class CreateDeckActivity extends AppCompatActivity {
         deck = new Deck();
         addCardErrorToast = Toast.makeText(getApplicationContext(), "ERROR: Add text to both Prompt and Answer Fields", Toast.LENGTH_LONG);
         addCardSuccessToast = Toast.makeText(getApplicationContext(), "Card Added!", Toast.LENGTH_LONG);
-        userNameTextView.setText(user.getUid());
+        userNameTextView.setText(user.getDisplayName());
 
     }
 
