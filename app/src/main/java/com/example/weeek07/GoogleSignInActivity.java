@@ -51,7 +51,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
 
-    FirebaseUser user;
+    FirebaseUser mUser;
 
 
     @Override
@@ -116,8 +116,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+
             } else {
                 // Google Sign In failed, update UI appropriately
                 // [START_EXCLUDE]
@@ -131,35 +130,30 @@ public class GoogleSignInActivity extends AppCompatActivity implements
     // [START auth_with_google]
     private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
-        // [START_EXCLUDE silent]
-
-        // [END_EXCLUDE]
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        Log.d(TAG, "about to signInWithCredential");
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d(TAG, "inside completeListener");
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             progressDialog.dismiss();
-                            user = mAuth.getCurrentUser();
-                            DatabaseReference userRef =
-                                    FirebaseDatabase.getInstance().getReference().child("users").child(user.getUid());
+                            mUser = mAuth.getCurrentUser();
+                            Log.d(TAG, mUser.getDisplayName());
+
+                            //check if node already exists
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users");
                             userRef.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                    //Just checking if it already exists. If it does return.
-                                    if(dataSnapshot.exists()){
-                                        Log.d("Authentication", "User already Exists");
-                                    } else {
-                                        writeNewUser(getString(R.string.google_status_fmt, user.getUid()),
-                                                getString(R.string.google_status_fmt, user.getDisplayName()),
-                                                getString(R.string.google_status_fmt, user.getEmail()));
+                                    if(!dataSnapshot.hasChild(mUser.getUid())) {
+                                        Log.d(TAG, "gunna writeNewUser");
+                                        writeNewUser();
                                     }
-
-
                                 }
 
                                 @Override
@@ -175,9 +169,9 @@ public class GoogleSignInActivity extends AppCompatActivity implements
                                     Toast.LENGTH_SHORT).show();
                         }
 
-                        // [START_EXCLUDE]
 
-                        // [END_EXCLUDE]
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                     }
                 });
 
@@ -209,12 +203,15 @@ public class GoogleSignInActivity extends AppCompatActivity implements
         if (i == R.id.sign_in_button) {
             signIn();
         }
+
     }
 
-    public void writeNewUser(String userId, String name, String email){
+    public void writeNewUser(){
+        String name = mUser.getDisplayName();
+        String email = mUser.getEmail();
         User user = new User(name, email);
 
-        mDatabase.child("users").child(userId).setValue(user);
+        mDatabase.child("users").child(mUser.getUid()).setValue(user);
         Log.d("Authentication", "New USer Writen to that ID spot");
     }
 }

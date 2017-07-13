@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         progressDialog.dismiss();
-        Log.d("Authentication", "Connected!");
+        Log.d("Auth in MainActivity", "Connected!");
     }
 
     @Override

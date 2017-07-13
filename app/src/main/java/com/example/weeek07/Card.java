@@ -55,4 +55,6 @@ public class Card implements Serializable {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+
 }
