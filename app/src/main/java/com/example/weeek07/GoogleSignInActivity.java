@@ -1,11 +1,14 @@
 package com.example.weeek07;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +27,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class GoogleSignInActivity extends AppCompatActivity implements
@@ -33,6 +39,8 @@ public class GoogleSignInActivity extends AppCompatActivity implements
         View.OnClickListener {
 
     public DatabaseReference mDatabase;
+
+    ProgressDialog progressDialog;
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -43,6 +51,8 @@ public class GoogleSignInActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
 
+    FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +62,11 @@ public class GoogleSignInActivity extends AppCompatActivity implements
         //Database
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-
+        //Progress Dialog
+        progressDialog = new ProgressDialog(GoogleSignInActivity.this);
+        progressDialog.setTitle("Logging In...");
+        progressDialog.setCancelable(false);
+        progressDialog.setIndeterminate(true);
 
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
@@ -129,11 +143,31 @@ public class GoogleSignInActivity extends AppCompatActivity implements
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            progressDialog.dismiss();
+                            user = mAuth.getCurrentUser();
+                            DatabaseReference userRef =
+                                    FirebaseDatabase.getInstance().getReference().child("users").child(user.getUid());
+                            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    //Just checking if it already exists. If it does return.
+                                    if(dataSnapshot.exists()){
+                                        Log.d("Authentication", "User already Exists");
+                                    } else {
+                                        writeNewUser(getString(R.string.google_status_fmt, user.getUid()),
+                                                getString(R.string.google_status_fmt, user.getDisplayName()),
+                                                getString(R.string.google_status_fmt, user.getEmail()));
+                                    }
 
-                            writeNewUser(getString(R.string.google_status_fmt, user.getUid()),
-                                    getString(R.string.google_status_fmt, user.getDisplayName()),
-                                    getString(R.string.google_status_fmt, user.getEmail()));
+
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -170,6 +204,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
 
     @Override
     public void onClick(View v) {
+        progressDialog.show();
         int i = v.getId();
         if (i == R.id.sign_in_button) {
             signIn();
@@ -180,5 +215,6 @@ public class GoogleSignInActivity extends AppCompatActivity implements
         User user = new User(name, email);
 
         mDatabase.child("users").child(userId).setValue(user);
+        Log.d("Authentication", "New USer Writen to that ID spot");
     }
 }

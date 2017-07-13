@@ -1,5 +1,6 @@
 package com.example.weeek07;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -71,6 +72,8 @@ public class CreateDeckActivity extends AppCompatActivity {
         saveDeck();
         Log.d("doneClicked-CLICKED", "deck finalized");
         deck.logDeck();
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
 
 
     }

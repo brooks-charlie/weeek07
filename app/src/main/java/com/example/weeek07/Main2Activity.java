@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
     DatabaseReference userDBReference;
-
+    Class classDestination;
     HashMap deckList;
     LinearLayout ll;
 
@@ -36,6 +36,9 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        Bundle extras = getIntent().getExtras();
+        classDestination = (Class) extras.get("classDestination");
 
         ll = (LinearLayout) findViewById(R.id.linearLayout);
 
@@ -89,8 +92,9 @@ public class Main2Activity extends AppCompatActivity {
             Deck deck = (Deck) deckList.get(deckTag);
             Log.d("DECK CLICKED", "CLICKED");
             Log.d("DECK CLICKED", deck.getDeckName());
-            Intent i = new Intent(getApplicationContext(), QuizActivity.class);
+            Intent i = new Intent(getApplicationContext(), classDestination);
             i.putExtra("deckToQuiz", deck);
+            i.putExtra("deckId", deckTag);
             startActivity(i);
         }
     };
