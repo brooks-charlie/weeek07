@@ -21,10 +21,10 @@ import java.util.Random;
 */
 public class QuizActivity extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "MyPrefsFile";
+
     private static final String TAG_NAME = "Quiz Deck Log";
 
-    // Are we loading from shared prefs?
+
     boolean firstLoad;
 
     //Widgets
@@ -81,14 +81,7 @@ public class QuizActivity extends AppCompatActivity {
         rightCount = 0;
         masteredCount = 0;
 
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, 0);
-        if (prefs.contains("lastCard")){
-            Gson gson = new Gson();
-            String json = prefs.getString("lastCard", null);
-            cardToQuiz = gson.fromJson(json, Card.class);
-            Log.d("Last Card loaded", "LOADED!");
-            firstLoad = false;
-        }
+
         makePrompt();
 
     }
@@ -184,14 +177,7 @@ public class QuizActivity extends AppCompatActivity {
     public void onStop(){
         super.onStop();
 
-        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = preferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(cardToQuiz);
-        editor.putString("lastCard", json);
-        editor.commit();
-
-        Log.d("onStop occured", json);
+        Log.d("onStop occured", "stopped");
 
 
 
