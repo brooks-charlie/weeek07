@@ -118,9 +118,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
 
             } else {
                 // Google Sign In failed, update UI appropriately
-                // [START_EXCLUDE]
-
-                // [END_EXCLUDE]
+                Log.d(TAG, "authentication failure");
             }
         }
     }
