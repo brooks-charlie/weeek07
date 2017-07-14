@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\ce36eccff76edece414a976be731e447854e0ac4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_5a496f16f6a4830dce56c3fb94b3ba5332202830.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\96979b9cb52bee2d233b7a702986140f0d99d401\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_9e6dbef80d08bccace12f7c4283a3fef82ca7a44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\b8b26b189c5f9e20ddf2840138e7ffdae4ab12f0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_1c9269f488dbbb980d643d3ac59def2cd40b27ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.1\2a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0\gson-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="02a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\gson-2.8.1_a8c26732defa9387c03195cf4b5ff109bfdb65ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\c813ab10f44e1e69db4b98a592ea1333115b97ab\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_a79c6c4f7a93cafd106cb19bd465883e2acfc985.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\adba655d6bbf16564b7f56b1fdcaddbba38af741\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_5d225342a0dd2f468eb0e6434ba23b1ad59db707.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\07d4ac073e0bdb0b9c51d27d4d3e7ee40e5c7c2a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_734c4f8dbfc5345d19219e23bd440572a213b002.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\ced2b746b2c748c9d605d9564ffd3eda73ee52ee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_125a10d0c3bba9859d2ca5034df188f81851e40c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\61ed963cd37986915bc2f683e0ff84cafbb74982\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_c3a11f455675caee4c4e1ab999aad3da2ca619c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.gradle\caches\modules-2\files-2.1\com.google.gms\google-services\3.1.0\166ae4e6acd03b7bbebe221ffa54bc039fece1b9\google-services-3.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="166ae4e6acd03b7bbebe221ffa54bc039fece1b9">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\google-services-3.1.0_2e473ccdf360b0ce28eeb8aec7c0867c4661ce9a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\d88cc2d5c4ec70344062cd57b57ed06f8ee58917\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_02692f42a1b606ebcd014fb788ae3a6a13bb6d4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\b2231cb0543fe72ddea1cc3e08a07ee3e77b112b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_398d52a3613c6ff9cf587cd284c64fa89cac9415.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\65a23fd683250a0e2952f59383875ea2a990d208\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_1134995f81ed70ef38eab2628a64c44154f41124.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\48301c6c30e83ce751d6464a52b71ad0c0cab9cc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_d916b7717a8298b68e83c30d3d7966486fa75134.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\1852d018f66a8755d715b4b52e661439f870041a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_7c9e0caaea702af6fe0f648eda7d12083984ab60.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f62ff41e59196f014427479e9dbca8fb0b45de72">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_47b7b1d0a3877c19c09261229a695badcc40e6b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\37d71aa13645d7b42c48de42bdb09d09c84c47ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_3a599eca31f49140fa27363a592e25f09ec94010.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\42930f492ee166a8100ab7784a6cee2dbc251489\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_ade390c877063d926eac34b58b0da8ad8deb299b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\b7c452f5a42680c05544c181dd9307dff38a04b9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_2d91feca085af48c69a5991183d0a09a606e1e38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\7bdc488623b9d773e81c9a929e95a110a7446f15\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_2647bf021ac3a3a979cbb0bfe2f665d8d6f43c97.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_b843f27842875a2e496ff23b64fa6a310fccba12\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\8db3314bcbcf9bc77a59b05d90ea4268a0c08253\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_1cbe629cded0f0d97a0610cd59bd96bcd1119263.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\f2874e05bef9aa668e4eedad863b3c1b181301f6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_32f9ea1f7afc4558df4943ff597b1daad1ae485d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\e49a66cba17e0769041eda80450c68eef342cb6b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_f4b247cf6e409150f0dd787a2d02e31b0e1e5457.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\406892e3588d04b1b8466b9779a8e94ce625c919\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_610328c0ea6ea7fc6713019943eeb28e86f08f01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\23b824144b69f5bcb45eec6f4e2e62846e293720\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_b67e3ff775a5cb969b37ce1d8ee526a0e838192d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_7de7f3493a27f7ee2354c6a0ff5593ae6f7dbbed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\985e36fb0ffa75546ec79e83993e168cdb004168\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_719ef942bb7060c60a0b5e2e58f5860e7283d259.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\356d13b8240945653a3fd13abff0d3d624d6edf9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_fcdfb81ca6b477d3cb30de7a2b35aa33f947ba7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\.android\build-cache\41e4df77c327b8981267247f304067f11201fbeb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\classes_3bc4cf6dbceceb7d37adc12acbfcd64a57808f4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jayton\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Jayton\AndroidStudioProjects\weeek07\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_fe4c8011983b86b42f41f9c43cf5a358f855ea16.jar" />
+    </item>
+
+</items>
