@@ -11,6 +11,12 @@ import java.util.ArrayList;
 /**
  * Created by Jayton on 6/6/2017.
  */
+/**Deck.java - deck data structure to hold our cards.
+*@author Jayton
+*@version 1.0
+*/
+
+
 
 public class Deck implements Serializable{
 
@@ -18,10 +24,20 @@ public class Deck implements Serializable{
 
     private String deckName;
 
+    /**
+    *Get deck name
+    *Method is used when the Decks naem is needed to be retrieved.
+    *@return An [Data Type] data type
+    */
     public String getDeckName() {
         return deckName;
     }
 
+    /**
+    *Sets deck name
+    *Method is called when deck name needs to be changed.
+    *@param deckName A variable of type String
+    */
     public void setDeckName(String deckName) {
         this.deckName = deckName;
     }
@@ -34,6 +50,12 @@ public class Deck implements Serializable{
     }
     ArrayList<Card> cards = new ArrayList<>();
 
+    /**
+    *creates a card
+    *Creates a new card for the currrent deck.
+    *@param prompt A variable of type String
+    *@param answer A variable of type String
+    */
     public void addCard(String prompt, String answer){
         Card card = new Card(prompt, answer);
         cards.add(card);
