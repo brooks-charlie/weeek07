@@ -32,6 +32,10 @@ public class Main2Activity extends AppCompatActivity {
     HashMap deckList;
     LinearLayout ll;
 
+    //widgets for when user has no decks
+    Button createDeckButton;
+    TextView emptyDeckMessage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,14 @@ public class Main2Activity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         classDestination = (Class) extras.get("classDestination");
 
+        //Connect widgets
+        createDeckButton = (Button)findViewById(R.id.button13);
+        emptyDeckMessage = (TextView)findViewById(R.id.textView8);
         ll = (LinearLayout) findViewById(R.id.linearLayout);
+
+        //Hide widgets only to be show when user has no decks
+        emptyDeckMessage.setVisibility(View.INVISIBLE);
+        createDeckButton.setVisibility(View.INVISIBLE);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -55,9 +66,10 @@ public class Main2Activity extends AppCompatActivity {
                 // LOG THE DECKS WITH MAP ITERATOR
                 deckList = (HashMap) user.deckList;
                 if (deckList == null){
-                    TextView tv = new TextView(getApplicationContext());
-                    tv.setText("You don't have any decks!");
-                    ll.addView(tv);
+                    //Hide scrollView and Show TV and Button about not having decks
+                    createDeckButton.setVisibility(View.VISIBLE);
+                    emptyDeckMessage.setVisibility(View.VISIBLE);
+                    ll.setVisibility(View.INVISIBLE);
                 }
                 else {
                     Iterator it = deckList.entrySet().iterator();
@@ -98,4 +110,9 @@ public class Main2Activity extends AppCompatActivity {
             startActivity(i);
         }
     };
+
+    public void createDeckButtonClick(View v){
+        Intent i = new Intent(getApplicationContext(), CreateDeckActivity.class);
+        startActivity(i);
+    }
 }
