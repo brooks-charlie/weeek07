@@ -130,6 +130,9 @@ public class ManageDeck extends AppCompatActivity {
     }
 
     public void updateUI(){
+        //get deck size.
+        int deckMaxCount = deck.cards.size();
+
         //If there are no more cards change UI accordingly
         if(deck.cards.isEmpty()) {
             //hide buttons except for addCard and deleteDeck and add a message.
@@ -142,12 +145,11 @@ public class ManageDeck extends AppCompatActivity {
 
             //Make empty deck message visible
             emptyDeckMessage.setVisibility(View.VISIBLE);
+
+            //Show an empty count
+            deckIdView.setText("Card " + (deckIndex + 1) + " out of " + deckMaxCount);
             return;
         }
-
-
-        //get deck size.
-        int deckMaxCount = deck.cards.size();
 
         //set editText widgets to the card's value.
         deckIdView.setText("Card " + (deckIndex + 1) + " out of " + deckMaxCount);
@@ -182,6 +184,17 @@ public class ManageDeck extends AppCompatActivity {
     }
 
     public void addCard(View v) {
+        //make everything visible if it isnt
+        promptTv.setVisibility(View.VISIBLE);
+        answerTv.setVisibility(View.VISIBLE);
+        promptEditText.setVisibility(View.VISIBLE);
+        answerEditText.setVisibility(View.VISIBLE);
+        saveCardButton.setVisibility(View.VISIBLE);
+        deleteCardButton.setVisibility(View.VISIBLE);
+
+        //Make empty deck message invisible if it isnt
+        emptyDeckMessage.setVisibility(View.INVISIBLE);
+
         Card card = new Card("Write a prompt", "Write an answer");
         deck.cards.add(card);
         deckIndex = deck.cards.indexOf(card);
