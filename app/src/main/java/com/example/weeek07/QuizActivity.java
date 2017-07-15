@@ -1,16 +1,12 @@
 package com.example.weeek07;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -40,8 +36,8 @@ public class QuizActivity extends AppCompatActivity {
     Deck deck;
     ArrayList<Card> quizCards;
     Card cardToQuiz;
-    int wrongCount;
-    int rightCount;
+    float wrongCount;
+    float rightCount;
     int masteredCount;
     Toast masteredToast;
     Toast rightToast;
@@ -98,8 +94,8 @@ public class QuizActivity extends AppCompatActivity {
         firstLoad = true;
         //Set text to prompt and counters.
         cardText.setText(cardToQuiz.getPrompt());
-        numberRightTextView.setText("Right: " + rightCount);
-        numberWrongTextView.setText("Wrong: " + wrongCount);
+        numberRightTextView.setText("Right: " + String.format("%.0f", rightCount));
+        numberWrongTextView.setText("Wrong: " + String.format("%.0f", wrongCount));
         numberMasteredTextView.setText("Mastered: " + masteredCount);
 
         //Set up flip button/hide other buttons
@@ -161,8 +157,9 @@ public class QuizActivity extends AppCompatActivity {
         flipButton.setVisibility(View.GONE);
         wrongButton.setVisibility(View.GONE);
         rightButton.setVisibility(View.GONE);
-        float userScore = rightCount / (rightCount + wrongCount);
-        cardText.setText("Nice Job! Your score was " + userScore);
+        float userScore = (rightCount / (rightCount + wrongCount)) * 100;
+
+        cardText.setText("Nice Job! Your score was " + String.format("%.0f", userScore) +"%");
 
     }
     //This function logs each card in quizCards. Debugging purposes only. May be removed later.
